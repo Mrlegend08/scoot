@@ -59,7 +59,7 @@ body {
   font-family: "Space Mono", "Courier New", monospace;
   font-weight: 700;
   background-color: #fff;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 img {
@@ -273,7 +273,7 @@ a {
   content: "";
 }
 
-.ul-stiecon {
+.ul-section {
   position: relative;
   overflow: hidden;
   background-image: url(../images/circle.png), url(../images/circle.png),
