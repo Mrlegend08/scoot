@@ -59,6 +59,7 @@ body {
   font-family: "Space Mono", "Courier New", monospace;
   font-weight: 700;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 img {
