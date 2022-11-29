@@ -1,0 +1,400 @@
+/* space-mono-regular - latin */
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/space-mono-v12-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/space-mono-v12-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* space-mono-700 - latin */
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/space-mono-v12-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/space-mono-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lexend-deca-regular - latin */
+@font-face {
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/lexend-deca-v17-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/lexend-deca-v17-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --header-bg-color: #fff;
+  --main-bg-color: #fff;
+  --main-text-color: #495567;
+  --subtitle-text-color: #939caa;
+  --main-btn-color: #fcb72b;
+  --footer-bg-color: #333a44;
+}
+
+/* GENERAL */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  font-family: "Space Mono", "Courier New", monospace;
+  font-weight: 700;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1146px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-main__btn {
+  padding: 14px 39px;
+  font-size: 15px;
+  line-height: 25px;
+  border: 3px solid var(--main-btn-color);
+  background-color: var(--main-btn-color);
+  color: var(--header-bg-color);
+}
+
+.site-main__btn:active {
+  border: 3px solid var(--main-btn-color);
+  background-color: transparent;
+  color: var(--main-btn-color);
+}
+
+/************** HEADER STYLES START **************/
+.site-header {
+  background-color: var(--header-bg-color);
+  padding-top: 22px;
+  padding-bottom: 21px;
+}
+
+.site-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header__start {
+  display: flex;
+  align-items: center;
+}
+
+.site-header__logo {
+  margin-right: 58px;
+  color: var(--main-text-color);
+}
+
+.site-nav__list {
+  display: flex;
+}
+
+.site-nav__link {
+  margin-right: 32px;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--subtitle-text-color);
+}
+
+.site-nav__link:active {
+  color: var(--main-btn-color);
+}
+/************** HEADER STYLES END **************/
+
+/************** MAIN STYLES START **************/
+.site-main {
+  background-color: var(--main-bg-color);
+}
+/**** HERO SECTION START ****/
+.hero-section {
+  background-image: url("../images/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay-bg {
+  width: 100%;
+  height: 100%;
+  padding-top: 153px;
+  padding-bottom: 152px;
+  background-color: rgba(47, 59, 89, 0.7);
+}
+
+.hero-section__title {
+  width: 550px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 56px;
+  line-height: 56px;
+  color: var(--main-bg-color);
+}
+
+.hero-section__desc {
+  position: relative;
+  width: 405px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  margin-left: 95px;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--main-bg-color);
+}
+
+.hero-section__desc::before {
+  position: absolute;
+  top: calc(50% - 11px);
+  left: calc(50% - 502px);
+  display: inline-block;
+  width: 210px;
+  height: 15px;
+  background-image: url("../images/hero-arrow-start.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.hero-section__desc::after {
+  position: absolute;
+  top: calc(50% - 11px);
+  left: calc(50% + 289px);
+  display: inline-block;
+  width: 450px;
+  height: 150px;
+  background-image: url("../images/hero-arrow-end.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.hero-section__btn {
+  margin-left: 95px;
+}
+/**** HERO SECTION END ****/
+
+.service-section {
+  background-image: url("../images/Path.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 265px) calc(50% - 120px);
+  padding-top: 160px;
+  padding-bottom: 200px;
+}
+.service-section-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+.service-section-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 27px;
+}
+.service-section-item-title {
+  width: 350px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+  color: #495567;
+}
+.service-section-item-desc {
+  width: 350px;
+  margin: 0;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939caa;
+}
+
+.service-section-item-title::before {
+  display: block;
+  border-radius: 50%;
+  background-color: #fcb72b;
+  width: 96px;
+  height: 96px;
+  background-image: url("../images/icons/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 40px;
+  content: "";
+}
+
+.ul-stiecon {
+  position: relative;
+  overflow: hidden;
+  background-image: url(../images/circle.png), url(../images/circle.png),
+    url(../images/circle.png);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 870px) calc(50% - 780px),
+    calc(50% - 870px) calc(50% - 175px), calc(50% + 870px) calc(50% + 430px);
+  padding-bottom: 329px;
+}
+
+.ul-section-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 160px;
+}
+.ul-section-item {
+  display: flex;
+  align-items: center;
+  gap: 220px;
+}
+.ul-section-item-start {
+  width: 445px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ul-section-item-start-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+  color: #495567;
+}
+.ul-section-item-start-desc {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939caa;
+}
+.ul-section-item > .ul-section-item-start > button {
+  margin: 0;
+}
+.ul-section-item-img {
+  border-radius: 50%;
+}
+
+.right {
+  position: absolute;
+  left: calc(50% + 10px);
+  top: calc(50% - 695px);
+}
+.left {
+  position: absolute;
+  top: calc(50% - 395px);
+  left: calc(50% + -1102px);
+}
+.right2 {
+  position: absolute;
+
+  left: calc(50% + 369px);
+  top: calc(50% + 302px);
+}
+
+.article-section {
+  background-color: #495567;
+  padding-top: 102px;
+  padding-bottom: 102px;
+}
+
+.article-section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.article-section-title {
+  width: 415px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+  color: #ffffff;
+}
+.apps {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.site-footer {
+  padding: 35px 0;
+  background-color: #333a44;
+}
+
+.site-footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.start {
+  display: flex;
+  align-items: center;
+}
+.start > img {
+  margin-right: 58px;
+}
+.site-footer-link {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939caa;
+  margin-right: 32px;
+}
+.end {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/************** MAIN STYLES END **************/
